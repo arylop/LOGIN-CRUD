@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="tarjeta">
+    <h2>¡Bienvenido(a)!</h2>
+
+    <h3>{{ nombre }}</h3>
+
+    <p>Has iniciado sesión correctamente.</p>
+
+    <a class="boton-secundario" href="{{ url_for('usuarios') }}">
+        Administrar usuarios
+    </a>
+
+    <a class="boton-salir" href="{{ url_for('salir') }}">
+        Cerrar sesión
+    </a>
+</div>
+
+{% endblock %}

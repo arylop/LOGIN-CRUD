@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="tarjeta">
+    <h2>Iniciar sesión</h2>
+
+    <form method="POST">
+        <label>Usuario:</label>
+        <input type="text" name="nombre" placeholder="Escribe tu usuario" required>
+
+        <label>Contraseña:</label>
+        <input type="password" name="contrasena" placeholder="Escribe tu contraseña" required>
+
+        <button type="submit">ACCEDER</button>
+    </form>
+
+    <p>¿Eres nuevo usuario?</p>
+    <a class="boton-secundario" href="{{ url_for('registro') }}">
+        Crear cuenta
+    </a>
+</div>
+
+{% endblock %}

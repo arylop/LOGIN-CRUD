@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="tarjeta">
+    <h2>Actualizar usuario</h2>
+
+    <form method="POST">
+        <label>Nombre de usuario:</label>
+        <input type="text" name="nombre"
+               value="{{ usuario.nombre }}" required>
+
+        <label>Correo:</label>
+        <input type="email" name="correo"
+               value="{{ usuario.correo }}" required>
+
+        <button type="submit">GUARDAR CAMBIOS</button>
+    </form>
+
+    <a href="{{ url_for('usuarios') }}">Cancelar</a>
+</div>
+
+{% endblock %}
